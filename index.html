@@ -211,12 +211,14 @@
             aspect-ratio: 1;
             border-radius: 50%;
             background:
-                radial-gradient(circle at 32% 28%,
-                #a5f3fc 0%,
-                #60a5fa 12%,
-                #2453a2 35%,
-                #111827 66%,
-                #080b12 74%);
+                radial-gradient(
+                    circle at 32% 28%,
+                    #a5f3fc 0%,
+                    #60a5fa 12%,
+                    #2453a2 35%,
+                    #111827 66%,
+                    #080b12 74%
+                );
             box-shadow:
                 inset -25px -25px 55px #02040a,
                 0 0 70px rgba(59,130,246,0.2);
@@ -262,8 +264,13 @@
         }
 
         @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-14px); }
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-14px);
+            }
         }
 
         /* SECTION COMMON */
@@ -342,7 +349,7 @@
 
         .portfolio-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(4, 1fr);
             gap: 20px;
         }
 
@@ -364,9 +371,11 @@
             display: grid;
             place-items: center;
             background:
-                radial-gradient(ellipse at center,
-                rgba(59,130,246,0.17),
-                transparent 65%),
+                radial-gradient(
+                    ellipse at center,
+                    rgba(59,130,246,0.17),
+                    transparent 65%
+                ),
                 #0c111b;
             border-bottom: 1px solid var(--border);
         }
@@ -408,9 +417,11 @@
             border: 1px solid rgba(96,165,250,0.2);
             border-radius: 18px;
             background:
-                radial-gradient(ellipse at top right,
-                rgba(59,130,246,0.12),
-                transparent 55%),
+                radial-gradient(
+                    ellipse at top right,
+                    rgba(59,130,246,0.12),
+                    transparent 55%
+                ),
                 var(--surface);
             display: flex;
             align-items: center;
@@ -442,6 +453,12 @@
         }
 
         /* MOBILE RESPONSIVE */
+
+        @media (max-width: 1000px) {
+            .portfolio-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
 
         @media (max-width: 800px) {
             .container {
@@ -489,10 +506,6 @@
 
             .about-grid {
                 grid-template-columns: 1fr;
-            }
-
-            .portfolio-grid {
-                grid-template-columns: repeat(2, 1fr);
             }
 
             .contact-box {
@@ -625,7 +638,9 @@
 
                 <div class="section-heading">
                     <div class="section-kicker">A LITTLE ABOUT ME</div>
+
                     <h2>Creating in Three Dimensions.</h2>
+
                     <p>
                         A little introduction to my creative
                         journey and the skills I'm developing.
@@ -635,7 +650,9 @@
                 <div class="about-grid">
 
                     <div class="about-card">
+
                         <h3>Who I Am</h3>
+
                         <p>
                             I'm Maruf, a beginner 3D artist
                             focused on 3D modeling and topology.
@@ -643,10 +660,13 @@
                             improving my skills through practice
                             and personal projects.
                         </p>
+
                     </div>
 
                     <div class="about-card">
+
                         <h3>My Skills</h3>
+
                         <p>
                             My current focus is building a
                             strong foundation in 3D modeling
@@ -659,6 +679,7 @@
                             <span class="skill">Topology</span>
                             <span class="skill">3D Art</span>
                         </div>
+
                     </div>
 
                 </div>
@@ -671,100 +692,171 @@
             <div class="container">
 
                 <div class="section-heading">
-                    <div class="section-kicker">SELECTED WORK</div>
+
+                    <div class="section-kicker">
+                        SELECTED WORK
+                    </div>
+
                     <h2>My 3D Portfolio.</h2>
+
                     <p>
                         A home for my upcoming 3D models,
                         experiments, and creative projects.
                     </p>
+
                 </div>
 
                 <div class="portfolio-grid">
 
-                    <div class="portfolio-grid">
+                    <article class="project-card">
 
-    <article class="project-card">
-        <div class="project-preview">
-            <div class="preview-symbol">01</div>
-        </div>
-        <div class="project-info">
-            <h3>3D Modeling</h3>
-            <p>New projects coming soon.</p>
-            <span class="coming-soon">Coming Soon</span>
-        </div>
-    </article>
+                        <div class="project-preview">
+                            <div class="preview-symbol">01</div>
+                        </div>
 
-    <article class="project-card">
-        <div class="project-preview">
-            <div class="preview-symbol">02</div>
-        </div>
-        <div class="project-info">
-            <h3>Retopology</h3>
-            <p>New projects coming soon.</p>
-            <span class="coming-soon">Coming Soon</span>
-        </div>
-    </article>
+                        <div class="project-info">
 
-    <article class="project-card">
-        <div class="project-preview">
-            <div class="preview-symbol">03</div>
-        </div>
-        <div class="project-info">
-            <h3>Rigging</h3>
-            <p>New projects coming soon.</p>
-            <span class="coming-soon">Coming Soon</span>
-        </div>
-    </article>
+                            <h3>3D Modeling</h3>
 
-    <article class="project-card">
-        <div class="project-preview">
-            <div class="preview-symbol">04</div>
-        </div>
-        <div class="project-info">
-            <h3>Creative Projects</h3>
-            <p>New projects coming soon.</p>
-            <span class="coming-soon">Coming Soon</span>
-        </div>
-    </article>
+                            <p>
+                                New projects coming soon.
+                            </p>
 
-</div>
+                            <span class="coming-soon">
+                                Coming Soon
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="project-card">
+
+                        <div class="project-preview">
+                            <div class="preview-symbol">02</div>
+                        </div>
+
+                        <div class="project-info">
+
+                            <h3>Retopology</h3>
+
+                            <p>
+                                New projects coming soon.
+                            </p>
+
+                            <span class="coming-soon">
+                                Coming Soon
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="project-card">
+
+                        <div class="project-preview">
+                            <div class="preview-symbol">03</div>
+                        </div>
+
+                        <div class="project-info">
+
+                            <h3>Rigging</h3>
+
+                            <p>
+                                New projects coming soon.
+                            </p>
+
+                            <span class="coming-soon">
+                                Coming Soon
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="project-card">
+
+                        <div class="project-preview">
+                            <div class="preview-symbol">04</div>
+                        </div>
+
+                        <div class="project-info">
+
+                            <h3>Creative Projects</h3>
+
+                            <p>
+                                New projects coming soon.
+                            </p>
+
+                            <span class="coming-soon">
+                                Coming Soon
+                            </span>
+
+                        </div>
+
+                    </article>
 
                 </div>
+
             </div>
         </section>
 
         <!-- CONTACT SECTION -->
 
         <section class="content-section" id="contact">
+
             <div class="container">
 
                 <div class="contact-box">
+
                     <div>
-                        <div class="section-kicker">GET IN TOUCH</div>
+
+                        <div class="section-kicker">
+                            GET IN TOUCH
+                        </div>
+
                         <h2>Let's Connect.</h2>
+
                         <p>
                             Interested in my work?
                             Feel free to connect with me.
                             My contact details will be added here soon.
                         </p>
+
                     </div>
 
-                    <a href="mailto:YOUR-EMAIL@example.com"
-                       class="button button-primary">
+                    <a
+                        href="mailto:YOUR-EMAIL@example.com"
+                        class="button button-primary"
+                    >
                         Contact Me ↗
                     </a>
+
                 </div>
 
             </div>
+
         </section>
 
     </main>
 
     <footer>
+
         <div class="container footer-content">
-            <span>© 2026 Maruf 3D. All rights reserved.</span>
-            <span>Designed & built by Maruf.</span>
+
+            <span>
+                © 2026 Maruf 3D. All rights reserved.
+            </span>
+
+            <span>
+                Designed & built by Maruf.
+            </span>
+
         </div>
+
     </footer>
 
 </body>
